@@ -1,0 +1,6 @@
+/mix-manifest.json
+/npm-debug.log
+/.idea
+/node_modules
+/build/css/*.css
+/build/js/*.js
