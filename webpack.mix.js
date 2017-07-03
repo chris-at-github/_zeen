@@ -1,5 +1,5 @@
 var mix = require('laravel-mix');
-		mix.setPublicPath('.');
+		// mix.setPublicPath('.');
 
 /*
  |--------------------------------------------------------------------------
@@ -12,5 +12,5 @@ var mix = require('laravel-mix');
  |
  */
 
-mix.js('src/js/cultures.js', 'build/js')
-	.sass('src/scss/screen.scss', 'build/css')
+mix.js('resources/js/cultures.js', 'public/js')
+	.sass('resources/scss/screen.scss', 'public/css')
