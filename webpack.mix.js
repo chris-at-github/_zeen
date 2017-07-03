@@ -1,5 +1,10 @@
 var mix = require('laravel-mix');
-		// mix.setPublicPath('.');
+
+// Autoload jQuery
+// @see: https://github.com/JeffreyWay/laravel-mix/blob/master/docs/autoloading.md
+// mix.autoload({
+// 	jquery: ['$', 'window.jQuery']
+// });
 
 /*
  |--------------------------------------------------------------------------

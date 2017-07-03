@@ -6,8 +6,13 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 	<title>Cultures</title>
+
+	<link rel="stylesheet" type="text/css" href="/css/screen.css">
 </head>
 <body>
 
+	<div id="map"></div>
+
+	<script src="/js/cultures.js"></script>
 </body>
 </html>

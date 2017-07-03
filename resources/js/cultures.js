@@ -1,1 +1,7 @@
-console.log('Cultures v0.0.1');
+var $ = require('jquery');
+var MapBuilder = require('./MapBuilder');
+// var MapService = require('./MapService');
+
+$(function() {
+	var map = new MapBuilder(null, $('#map'));
+});

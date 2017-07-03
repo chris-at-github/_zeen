@@ -1,3 +1,17 @@
 * {
-	background: red;
+	box-sizing: border-box;
+}
+
+body {
+	background: #eee;
+}
+
+#map {
+	position: absolute;
+	top: 0; left: 0;
+	width: 100px;
+	height: 100px;
+
+	border: 1px solid #ccc;
+	background: #fff;
 }
