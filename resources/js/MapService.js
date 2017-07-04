@@ -12,6 +12,7 @@
 })(this, function(global, $, undefined) {
 	'use strict';
 
+	// @see: http://clintbellanger.net/articles/isometric_math/
 	function MapService(options) {
 		this.options = $.extend({}, MapService.DEFAULTS, options);
 	}
