@@ -45,8 +45,6 @@
 	 * @return object
 	 */
 	MapService.prototype.getCenterPosition = function() {
-		// console.log();
-
 		return {
 			'x': ($(window).width() - this.getWidth()) / 2,
 			'y': ($(window).height() - this.getHeight()) / 2
