@@ -56,7 +56,17 @@
 			'left': this.service.getCenterPosition().x
 		});
 
-		// this.service.getCenterPosition();
+		return this;
+	};
+
+	/**
+	 * @return MapBuilder
+	 */
+	MapBuilder.prototype.recenterContainer = function() {
+		this.container.css({
+			'top': this.service.getCenterPosition().y,
+			'left': this.service.getCenterPosition().x
+		});
 
 		return this;
 	};
