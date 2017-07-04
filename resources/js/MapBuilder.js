@@ -12,15 +12,19 @@
 })(this, function(global, $, undefined) {
 	'use strict';
 
+	var MapService = require('./MapService');
+
 	function MapBuilder(options, container) {
 		this.container = $('<div>');
 		this.options = $.extend({}, MapBuilder.DEFAULTS, options);
+		this.service = new MapService();
 
 		var _ = this;
 		var initialize = function() {
 
 			if(container !== undefined) {
 				_.setContainer(container)
+					.initializeContainer();
 			}
 		};
 
@@ -30,29 +34,28 @@
 	MapBuilder.DEFAULTS = {
 	};
 
+	/**
+	 * @param object container
+	 * @return MapBuilder
+	 */
 	MapBuilder.prototype.setContainer = function(container) {
 		this.container = container;
 
-		console.log(this.container);
+		return this;
+	};
+
+	/**
+	 * @return MapBuilder
+	 */
+	MapBuilder.prototype.initializeContainer = function() {
+		this.container.addClass('map');
+		this.container.css({
+			'width': this.service.getWidth(),
+			'height': this.service.getHeight()
+		});
+
+		return this;
 	};
 
 	return MapBuilder;
 });
-
-
-//
-//
-//
-//
-//
-// module.exports = (function() {
-// 	var _ = this;
-//
-// 	this.container = null;
-//
-// 	return {
-// 		setContainer: function(container) {
-// 			_.container = container;
-// 		}
-// 	};
-// })();
