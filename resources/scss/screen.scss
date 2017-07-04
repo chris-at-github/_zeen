@@ -7,7 +7,15 @@ body {
 }
 
 .map {
-	position: absolute;
-	border: 1px solid #ccc;
-	background: #fff;
+	& {
+		position: absolute;
+		border: 1px solid #ccc;
+		background: #fff;
+	}
+
+	.map--tile-container {
+		position: absolute;
+		top: 0; bottom: 0;
+		left: 0; right: 0;
+	}
 }

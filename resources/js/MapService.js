@@ -17,16 +17,7 @@
 		this.options = $.extend({}, MapService.DEFAULTS, options);
 	}
 
-	MapService.DEFAULTS = {
-		'map': {
-			'x': 1,
-			'y': 1
-		},
-		'tile': {
-			'width': 100,
-			'height': 100
-		}
-	};
+	MapService.DEFAULTS = {};
 
 	/**
 	 * @return int

@@ -13,17 +13,19 @@
 	'use strict';
 
 	var MapService = require('./MapService');
+	var Tile = require('./Tile');
 
 	function MapBuilder(options, container) {
 		this.container = $('<div>');
 		this.options = $.extend({}, MapBuilder.DEFAULTS, options);
-		this.service = new MapService();
+		this.service = new MapService(this.options);
 
-		var _ = this;
+		var builder = this;
 		var initialize = function() {
 
 			if(container !== undefined) {
-				_.setContainer(container)
+				builder
+					.setContainer(container)
 					.initializeContainer();
 			}
 		};
@@ -32,6 +34,14 @@
 	}
 
 	MapBuilder.DEFAULTS = {
+		'map': {
+			'x': 1,
+			'y': 1
+		},
+		'tile': {
+			'width': 100,
+			'height': 100
+		}
 	};
 
 	/**
@@ -56,6 +66,11 @@
 			'left': this.service.getCenterPosition().x
 		});
 
+		// Generating tiles (and container)
+		this
+			.createTileContainer()
+			.createTiles();
+
 		return this;
 	};
 
@@ -67,6 +82,34 @@
 			'top': this.service.getCenterPosition().y,
 			'left': this.service.getCenterPosition().x
 		});
+
+		return this;
+	};
+
+	/**
+	 * @return MapBuilder
+	 */
+	MapBuilder.prototype.createTileContainer = function() {
+		var container = $('<div>');
+				container.addClass('map--tile-container');
+		this.container.append(container);
+
+		return this;
+	};
+
+	/**
+	 * @return MapBuilder
+	 */
+	MapBuilder.prototype.createTiles = function() {
+		var container = this.container.find('.map--tile-container');
+
+		for(var x = 1; x <= this.options.map.x; x++) {
+			for(var y = 1; y <= this.options.map.y; y++) {
+				var tile = new Tile(x, y);
+
+				container.append(tile.render());
+			}
+		}
 
 		return this;
 	};
