@@ -41,5 +41,17 @@
 		return (this.options.map.y * this.options.tile.height);
 	};
 
+	/**
+	 * @return object
+	 */
+	MapService.prototype.getCenterPosition = function() {
+		// console.log();
+
+		return {
+			'x': ($(window).width() - this.getWidth()) / 2,
+			'y': ($(window).height() - this.getHeight()) / 2
+		};
+	};
+
 	return MapService;
 });

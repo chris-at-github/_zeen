@@ -51,8 +51,12 @@
 		this.container.addClass('map');
 		this.container.css({
 			'width': this.service.getWidth(),
-			'height': this.service.getHeight()
+			'height': this.service.getHeight(),
+			'top': this.service.getCenterPosition().y,
+			'left': this.service.getCenterPosition().x
 		});
+
+		// this.service.getCenterPosition();
 
 		return this;
 	};
