@@ -12,5 +12,7 @@
 */
 
 $app->get('/', function () use ($app) {
-    return view('index');
+	$app->configure('cultures');
+
+  return view('index');
 });
