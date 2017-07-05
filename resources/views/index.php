@@ -8,11 +8,21 @@
 	<title>Cultures</title>
 
 	<link rel="stylesheet" type="text/css" href="/css/screen.css">
+
+	<script type="text/javascript">
+		var Cultures = {};
+	</script>
 </head>
 <body>
 
 	<div id="map"></div>
 
+	<script type="text/javascript">
+
+		Cultures.settings = {};
+		Cultures.scene = {};
+
+	</script>
 	<script src="/js/cultures.js"></script>
 </body>
 </html>
