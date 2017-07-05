@@ -54,6 +54,12 @@
 	 */
 	Tile.prototype.initializeContainer = function() {
 		this.container.addClass('tile');
+		this.container.css({
+			'width': this.getWidth(),
+			'height': this.getHeight()
+		});
+
+		return this;
 	};
 
 	/**
@@ -61,6 +67,20 @@
 	 */
 	Tile.prototype.render = function() {
 		return this.container;
+	};
+
+	/**
+	 * @return int
+	 */
+	Tile.prototype.getWidth = function() {
+		return this.options.size;
+	};
+
+	/**
+	 * @return int
+	 */
+	Tile.prototype.getHeight = function() {
+		return this.options.size;
 	};
 
 	Tile.DEFAULTS = {
