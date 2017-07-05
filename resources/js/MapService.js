@@ -23,14 +23,14 @@
 	 * @return int
 	 */
 	MapService.prototype.getWidth = function() {
-		return (this.options.map.x * this.options.tile.width);
+		return (this.options.map.x * this.options.tile.size);
 	};
 
 	/**
 	 * @return int
 	 */
 	MapService.prototype.getHeight = function() {
-		return (this.options.map.y * this.options.tile.height);
+		return (this.options.map.y * this.options.tile.size);
 	};
 
 	/**
