@@ -35,12 +35,13 @@
 
 	MapBuilder.DEFAULTS = {
 		'map': {
-			'x': 1,
-			'y': 1
+			'x': 2,
+			'y': 2
 		},
 		'tile': {
 			'width': 100,
-			'height': 100
+			'height': 100,
+			'size': 100
 		}
 	};
 

@@ -56,7 +56,9 @@
 		this.container.addClass('tile');
 		this.container.css({
 			'width': this.getWidth(),
-			'height': this.getHeight()
+			'height': this.getHeight(),
+			'left': this.getPosition().x,
+			'top': this.getPosition().y
 		});
 
 		return this;
@@ -81,6 +83,16 @@
 	 */
 	Tile.prototype.getHeight = function() {
 		return this.options.size;
+	};
+
+	/**
+	 * @return object
+	 */
+	Tile.prototype.getPosition = function() {
+		return {
+			'x': (this.x - 1) * this.options.size,
+			'y': (this.y - 1) * this.options.size
+		};
 	};
 
 	Tile.DEFAULTS = {
