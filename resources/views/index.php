@@ -18,10 +18,8 @@
 	<div id="map"></div>
 
 	<script type="text/javascript">
-
-		Cultures.settings = {};
+		Cultures.settings = <?php echo \App\Helpers\Json::encode($settings); ?>;
 		Cultures.scene = {};
-
 	</script>
 	<script src="/js/cultures.js"></script>
 </body>
