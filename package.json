@@ -16,6 +16,7 @@
     "laravel-mix": "^1.0.7",
     "lodash": "^4.17.4",
     "svg-sprite-loader": "^3.0.5",
-    "vue": "^2.1.10"
+    "vue": "^2.1.10",
+    "webpack": "^3.0.0"
   }
 }
