@@ -1,0 +1,1 @@
+import './resources/images/tiles/water.svg';

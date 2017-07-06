@@ -1,4 +1,4 @@
-var mix = require('laravel-mix');
+// var mix = require('laravel-mix');
 
 // const spriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
@@ -7,7 +7,6 @@ var mix = require('laravel-mix');
 // mix.autoload({
 // 	jquery: ['$', 'window.jQuery']
 // });
-
 
 // @see: https://www.npmjs.com/package/svg-sprite-loader
 // @see: https://laracasts.com/discuss/channels/laravel/help-needed-svg-sprites-with-laravelmix
@@ -64,12 +63,46 @@ var mix = require('laravel-mix');
 // 	.sass('resources/scss/screen.scss', 'public/css');
 
 const path = require('path');
-const packageName = require('../package.json').name;
+const packageName = require('./package.json').name;
+const spriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
 const config = {
+	entry: './main',
+
 	output: {
-		path:     __dirname
+		filename: 'xyz.js'
 	},
+
+	resolve: {
+		alias: {
+			[packageName]: path.resolve(__dirname, '..')
+		}
+	},
+
+	resolveLoader: {
+		alias: {
+			[packageName]: path.resolve(__dirname, '..')
+		}
+	},
+
+	module: {
+		rules: [
+			// images from img/flags goes to flags-sprite.svg
+			{
+				test:    /\.svg$/,
+				loader:  'svg-sprite-loader',
+				include: path.resolve('./resources/images/tiles'),
+				options: {
+					extract:        true,
+					spriteFilename: 'flags-sprite.svg'
+				}
+			}
+		]
+	},
+
+	plugins: [
+		new spriteLoaderPlugin()
+	]
 };
 
 module.exports = config;
