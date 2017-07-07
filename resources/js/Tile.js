@@ -61,6 +61,8 @@
 			'top': this.getPosition().y
 		});
 
+		this.renderTerrain();
+
 		return this;
 	};
 
@@ -69,6 +71,20 @@
 	 */
 	Tile.prototype.render = function() {
 		return this.container;
+	};
+
+	/**
+	 * @return void
+	 */
+	Tile.prototype.renderTerrain = function() {
+		var svg = $('<svg>');
+				svg.addClass('tile--terrain');
+
+		var use = $('<use>');
+				use.attr('xlink:href', '#water');
+
+		svg.append(use);
+		this.container.append(svg);
 	};
 
 	/**

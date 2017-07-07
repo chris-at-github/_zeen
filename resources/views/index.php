@@ -20,7 +20,7 @@
 	<?php echo \App\Helpers\Svg::import('tiles'); ?>
 
 	<svg class="svg-tile">
-		<use xlink:href="#green" />
+		<use xlink:href="#water" />
 	</svg>
 
 	<script type="text/javascript">
