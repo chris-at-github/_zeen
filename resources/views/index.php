@@ -17,6 +17,8 @@
 
 	<div id="map"></div>
 
+	<?php echo \App\Helpers\Svg::import('tiles'); ?>
+
 	<script type="text/javascript">
 		Cultures.settings = <?php echo \App\Helpers\Json::encode($settings); ?>;
 		Cultures.scene = <?php echo \App\Helpers\Json::encode($scene); ?>;
