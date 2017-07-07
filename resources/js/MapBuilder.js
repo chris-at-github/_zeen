@@ -37,9 +37,6 @@
 		'map': {
 			'x': 1,
 			'y': 1
-		},
-		'tile': {
-			'size': 100
 		}
 	};
 
@@ -104,7 +101,7 @@
 
 		for(var x = 1; x <= this.options.map.x; x++) {
 			for(var y = 1; y <= this.options.map.y; y++) {
-				var tile = new Tile(x, y);
+				var tile = new Tile(x, y, this.options.tile);
 
 				container.append(tile.render());
 			}

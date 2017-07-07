@@ -1,6 +1,6 @@
 <?php
 return [
 	'tile' => [
-		'size' => 64
+		'size' => 100
 	]
 ];
