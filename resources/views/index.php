@@ -19,6 +19,10 @@
 
 	<?php echo \App\Helpers\Svg::import('tiles'); ?>
 
+	<svg class="svg-tile">
+		<use xlink:href="#green" />
+	</svg>
+
 	<script type="text/javascript">
 		Cultures.settings = <?php echo \App\Helpers\Json::encode($settings); ?>;
 		Cultures.scene = <?php echo \App\Helpers\Json::encode($scene); ?>;
