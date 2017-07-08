@@ -15,13 +15,12 @@
 </head>
 <body>
 
-	<div id="map"></div>
+	<div id="application">
+		<cu-map></cu-map>
+		<cu-map></cu-map>
+	</div>
 
 	<?php echo \App\Helpers\Svg::import('tiles'); ?>
-
-	<svg class="svg-tile">
-		<use xlink:href="#green" />
-	</svg>
 
 	<script type="text/javascript">
 		Cultures.settings = <?php echo \App\Helpers\Json::encode($settings); ?>;
