@@ -1,31 +1,22 @@
 <template>
-	<div>
-		<!--<header-component/>-->
-		<div>this is {{msg}}</div>
-		<svg class="svg-tile">
-			<use xlink:href="#green" />
-		</svg>
-		<!--<other-component/>-->
-	</div>
+	<div class="map" v-bind:style="styleObject">{{msg}}</div>
 </template>
+
 <script>
-	// import HeaderComponent from './components/header.vue'
-	// import OtherComponent from './components/other.vue'
-	export default{
-		data() {
+	export default {
+		data: function() {
 			return {
-				msg: 'hello vue'
+				msg: 'hello vuex'
 			}
 		},
-		components:{
-			//'other-component':OtherComponent,
-			//HeaderComponent,
-		},
-		created() {
-			console.log(Cultures);
-		},
-		mounted() {
-			console.log('mount');
+
+		computed: {
+			styleObject: function() {
+				return {
+					'width': '100px',
+					'height': '100px'
+				}
+			}
 		}
 	}
 </script>
