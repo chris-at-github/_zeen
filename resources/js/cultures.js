@@ -1,4 +1,5 @@
-// var $ = require('jquery');
+window.$ = require('jquery');
+
 var Vue = require('vue');
 // var MapBuilder = require('./MapBuilder');
 //

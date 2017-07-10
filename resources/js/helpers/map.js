@@ -20,6 +20,13 @@ export default {
 
 		getMapHeight: function() {
 			return (this.getMaxY() * this.settings.tile.size);
+		},
+
+		getMapCenterPosition: function() {
+			return {
+				'x': ($(window).width() - this.getMapWidth()) / 2,
+				'y': ($(window).height() - this.getMapHeight()) / 2
+			};
 		}
 	}
 };

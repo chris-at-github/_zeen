@@ -22,7 +22,9 @@
 			styleObject: function() {
 				return {
 					'width': this.getMapWidth() + 'px',
-					'height': this.getMapHeight() + 'px'
+					'height': this.getMapHeight() + 'px',
+					'top': this.getMapCenterPosition().y + 'px',
+					'left': this.getMapCenterPosition().x + 'px'
 				}
 			}
 		},
