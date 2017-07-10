@@ -16,7 +16,7 @@
 <body>
 
 	<div id="application">
-		<cu-map></cu-map>
+		<cs-map />
 	</div>
 
 	<?php echo \App\Helpers\Svg::import('tiles'); ?>

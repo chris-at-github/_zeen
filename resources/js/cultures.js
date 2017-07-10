@@ -10,7 +10,7 @@ var Vue = require('vue');
 // 	});
 // });
 
-Vue.component('cu-map', require('./components/Map.vue'));
+Vue.component('cs-map', require('./components/max.vue'));
 
 const application = new Vue({
 	el: '#application'
