@@ -1,8 +1,9 @@
 <template>
-	<div class="map" v-bind:style="styleObject">{{msg}}</div>
+	<div class="map" v-bind:style="styleObject"></div>
 </template>
 
 <script>
+	import _ from 'lodash';
 	import MapHelper from '../helpers/map';
 
 	export default {
@@ -12,8 +13,8 @@
 
 		data: function() {
 			return {
-				msg: 'hello vuex',
-				settings: {}
+				settings: {},
+				scene: {}
 			}
 		},
 
@@ -21,15 +22,14 @@
 			styleObject: function() {
 				return {
 					'width': this.getMapWidth() + 'px',
-					'height': '100px'
+					'height': this.getMapHeight() + 'px'
 				}
 			}
 		},
 
 		created: function() {
 			this.settings = Cultures.settings;
-
-//			console.log(this.settings);
+			this.scene = Cultures.scene;
 		}
 	}
 </script>
