@@ -1,7 +1,27 @@
 import _ from 'lodash';
 
 export default {
+	data: function() {
+		return {
+			windowWidth: window.innerWidth,
+			windowHeight: window.innerHeight
+		};
+	},
+
+	beforeDestroy: function () {
+		window.removeEventListener('resize', this.onWindowResize)
+	},
+
+	mounted() {
+		window.addEventListener('resize', this.onWindowResize);
+	},
+
 	methods: {
+		onWindowResize(event) {
+			this.windowWidth = event.currentTarget.innerWidth;
+			this.windowHeight = event.currentTarget.innerHeight;
+		},
+
 		getMaxX: function() {
 			return _.maxBy(this.scene.tiles, function(tile) {
 				return tile.x;
@@ -24,8 +44,8 @@ export default {
 
 		getMapCenterPosition: function() {
 			return {
-				'x': ($(window).width() - this.getMapWidth()) / 2,
-				'y': ($(window).height() - this.getMapHeight()) / 2
+				'x': (this.windowWidth - this.getMapWidth()) / 2,
+				'y': (this.windowHeight - this.getMapHeight()) / 2
 			};
 		}
 	}
