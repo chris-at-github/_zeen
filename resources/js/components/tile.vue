@@ -1,5 +1,5 @@
 <template>
-	<div class="tile" v-bind:style="styleObject">{{x}} / {{y}}</div>
+	<div class="tile" v-bind:style="styleObject"></div>
 </template>
 
 <script>
@@ -10,7 +10,7 @@
 			MapHelper
 		],
 
-		props: ['x', 'y'],
+		props: ['properties'],
 
 		data: function() {
 			return {
@@ -20,6 +20,9 @@
 
 		computed: {
 			styleObject: function() {
+
+				console.log(this.properties);
+
 				return {
 				}
 			}

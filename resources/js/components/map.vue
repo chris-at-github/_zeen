@@ -1,7 +1,11 @@
 <template>
 	<div class="map" v-bind:style="styleObject">
 		<div class="map--tile-container">
-			<cs-tile x="1" y="1"></cs-tile>
+			<cs-tile
+				 v-for="(tile, index) in tiles"
+				 v-bind:properties="tile"
+				 v-bind:key="index">
+			</cs-tile>
 		</div>
 	</div>
 </template>
@@ -35,6 +39,10 @@
 					'top': this.getMapCenterPosition().y + 'px',
 					'left': this.getMapCenterPosition().x + 'px'
 				}
+			},
+
+			tiles: function() {
+				return this.scene.tiles;
 			}
 		},
 
