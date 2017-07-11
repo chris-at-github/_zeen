@@ -20,10 +20,11 @@
 
 		computed: {
 			styleObject: function() {
-
-				console.log(this.properties);
-
 				return {
+					'width':  this.getTileWidth() + 'px',
+					'height': this.getTileHeight() + 'px',
+					'left':   this.getTilePosition(this.properties.x, this.properties.y).x + 'px',
+					'top':    this.getTilePosition(this.properties.x, this.properties.y).y + 'px'
 				}
 			}
 		},

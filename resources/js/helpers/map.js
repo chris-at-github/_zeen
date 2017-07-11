@@ -49,6 +49,21 @@ export default {
 				'x': (this.windowWidth - this.getMapWidth()) / 2,
 				'y': (this.windowHeight - this.getMapHeight()) / 2
 			};
+		},
+
+		getTileWidth: function() {
+			return this.settings.tile.size;
+		},
+
+		getTileHeight: function() {
+			return this.settings.tile.size;
+		},
+
+		getTilePosition: function(x, y) {
+			return {
+				'x': (x - 1) * this.settings.tile.size,
+				'y': (y - 1) * this.settings.tile.size
+			};
 		}
 	}
 };
