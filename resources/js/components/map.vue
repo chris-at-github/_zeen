@@ -3,7 +3,8 @@
 		<div class="map--tile-container">
 			<cs-tile
 				 v-for="(tile, index) in tiles"
-				 v-bind:properties="tile"
+				 v-bind:x="tile.x"
+				 v-bind:y="tile.y"
 				 v-bind:key="index">
 			</cs-tile>
 		</div>
