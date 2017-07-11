@@ -16,6 +16,8 @@ export default {
 		window.addEventListener('resize', this.onWindowResize);
 	},
 
+	// Calculate tile sizes and positions
+	// @see: http://clintbellanger.net/articles/isometric_math/
 	methods: {
 
 		// @see: https://github.com/vuejs/vue/issues/1915
@@ -41,7 +43,7 @@ export default {
 		},
 
 		getMapHeight: function() {
-			return (this.getMaxY() * this.settings.tile.size);
+			return (this.getMaxY() * (this.settings.tile.size / 2));
 		},
 
 		getMapCenterPosition: function() {
@@ -56,7 +58,7 @@ export default {
 		},
 
 		getTileHeight: function() {
-			return this.settings.tile.size;
+			return (this.settings.tile.size / 2);
 		},
 
 		getTilePosition: function(x, y) {
