@@ -17,6 +17,8 @@ export default {
 	},
 
 	methods: {
+
+		// @see: https://github.com/vuejs/vue/issues/1915
 		onWindowResize(event) {
 			this.windowWidth = event.currentTarget.innerWidth;
 			this.windowHeight = event.currentTarget.innerHeight;
