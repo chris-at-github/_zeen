@@ -1,7 +1,7 @@
 <template>
 	<div class="tile" v-bind:style="styleObject">
 		<svg class="tile--terrain">
-			<use xlink:href="#water" />
+			<use v-bind="{'xlink:href':'#' + terrain}" />
 		</svg>
 	</div>
 </template>
@@ -9,12 +9,14 @@
 <script>
 	import MapHelper from '../helpers/map';
 
+	// use xlink:href binding
+	// @see: https://github.com/vuejs/vue/issues/648#issuecomment-304664977
 	export default {
 		mixins: [
 			MapHelper
 		],
 
-		props: ['x', 'y'],
+		props: ['x', 'y', 'terrain'],
 
 		data: function() {
 			return {

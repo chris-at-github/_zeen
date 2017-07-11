@@ -5,6 +5,7 @@
 				 v-for="(tile, index) in tiles"
 				 v-bind:x="tile.x"
 				 v-bind:y="tile.y"
+				 v-bind:terrain="tile.terrain"
 				 v-bind:key="index">
 			</cs-tile>
 		</div>

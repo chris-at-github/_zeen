@@ -5,7 +5,8 @@ return [
 	'tiles' => [
 		[
 			'x' => 1,
-			'y' => 1
+			'y' => 1,
+			'terrain' => '49cb0a4e-6625-11e7-907b-a6006ad3dba0',
 		]
 	]
 ];
