@@ -4,6 +4,6 @@ return [
 		'svg' => 'public' . DIRECTORY_SEPARATOR . 'svg' . DIRECTORY_SEPARATOR
 	],
 	'tile' => [
-		'size' => 100
+		'size' => 64
 	]
 ];
