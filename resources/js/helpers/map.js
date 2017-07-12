@@ -54,11 +54,11 @@ export default {
 		},
 
 		getTileWidth: function() {
-			return this.settings.tile.size * 2;
+			return this.settings.tile.size;
 		},
 
 		getTileHeight: function() {
-			return this.settings.tile.size;
+			return this.settings.tile.size / 2;
 		},
 
 		// x: 1, y:1
@@ -74,30 +74,10 @@ export default {
     // top: 96px;
 
 		getTilePosition: function(x, y) {
-			var nx = (x - y) * (this.settings.tile.size);
-			// var nx = (x - y) * this.settings.tile.size;
-			var ny = (x + y) * (this.settings.tile.size / 2);
-
 			return {
-				'x': nx,
-				'y': ny
+				'x': (x - y) * (this.getTileWidth() / 2),
+				'y': (x + y) * (this.getTileHeight() / 2)
 			};
-
-
-			// var nx = (x * this.settings.tile.size) - y;
-			// var ny = (x + (y * this.settings.tile.size)) / 2;
-			//
-			// console.log(nx, ny);
-			//
-			// return {
-			// 	'x': (2 * ny + nx) / 2,
-			// 	'y': (2 * ny - nx) / 2
-			// };
-
-			// return {
-			// 	'x': (x - 1) * this.settings.tile.size,
-			// 	'y': (y - 1) * this.settings.tile.size
-			// };
 		}
 	}
 };
