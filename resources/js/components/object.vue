@@ -10,12 +10,14 @@
 
 <script>
 	import MapHelper from '../helpers/map';
+	import ObjectHelper from '../helpers/object';
 
 	// use xlink:href binding
 	// @see: https://github.com/vuejs/vue/issues/648#issuecomment-304664977
 	export default {
 		mixins: [
-			MapHelper
+			MapHelper,
+			ObjectHelper
 		],
 
 		props: ['position', 'size'],
@@ -30,10 +32,10 @@
 		computed: {
 			styleObject: function() {
 				return {
-					'width':  35 + 'px',
-					'height': 35 + 'px',
-					'left':   0 + 'px',
-					'top':    0 + 'px'
+					'width':  this.size.width + 'px',
+					'height': this.size.height + 'px',
+					'left': this.getObjectCenterPosition().x + 'px',
+					'top': this.getObjectCenterPosition().y + 'px'
 				}
 			}
 		},
