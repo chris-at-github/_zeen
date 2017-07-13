@@ -54,8 +54,8 @@ export default {
 
 		getTileCenterPosition: function(x, y) {
 			return {
-				'x': this.getTilePosition(this.position.x, this.position.y).x + (this.getTileWidth() / 2),
-				'y': this.getTilePosition(this.position.x, this.position.y).y + (this.getTileHeight() / 2)
+				'x': this.getTilePosition(x, y).x + (this.getTileWidth() / 2),
+				'y': this.getTilePosition(x, y).y + (this.getTileHeight() / 2)
 			};
 		}
 	}
