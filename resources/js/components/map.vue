@@ -11,14 +11,20 @@
 		</div>
 
 		<div class="map--object-container">
-
+			<cs-object
+				v-for="(object, index) in objects"
+				v-bind:position="object.position"
+				v-bind:size="object.size"
+				v-bind:key="index">
+			</cs-object>
 		</div>
 	</div>
 </template>
 
 <script>
 	import MapHelper from '../helpers/map';
-	import Tile from './tile'
+	import Tile from './tile';
+	import Object from './object'
 
 	export default {
 		mixins: [
@@ -27,7 +33,8 @@
 
 		// @see: https://vuejs.org/v2/guide/components.html#Local-Registration
 		components: {
-			'cs-tile': Tile
+			'cs-tile': Tile,
+			'cs-object': Object
 		},
 
 		data: function() {
@@ -49,6 +56,10 @@
 
 			tiles: function() {
 				return this.scene.tiles;
+			},
+
+			objects: function() {
+				return this.scene.objects;
 			}
 		},
 
