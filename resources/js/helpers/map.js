@@ -55,6 +55,13 @@ export default {
 			};
 		},
 
+		getMapTileOffset: function() {
+			return {
+				'x': 0,
+				'y': 0
+			}
+		},
+
 		getTileWidth: function() {
 			return this.settings.tile.size;
 		},
@@ -62,18 +69,6 @@ export default {
 		getTileHeight: function() {
 			return this.settings.tile.size / 2;
 		},
-
-		// x: 1, y:1
-    // width: 128px;
-    // height: 64px;
-    // left: 0px;
-    // top: 64px;
-		//
-    // x: 2, y: 2
-    // width: 128px;
-    // height: 64px;
-    // left: 64px;
-    // top: 96px;
 
 		getTilePosition: function(x, y) {
 			return {
