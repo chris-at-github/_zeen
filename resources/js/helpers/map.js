@@ -57,8 +57,10 @@ export default {
 
 		getMapTileOffset: function() {
 			return {
-				'x': 0,
-				'y': 0
+
+				// this only works if map.x = map.y
+				'x': (this.getMapWidth() / 2) - (this.getTileWidth() / 2),
+				'y': this.getTileHeight()
 			}
 		},
 
@@ -72,8 +74,8 @@ export default {
 
 		getTilePosition: function(x, y) {
 			return {
-				'x': (x - y) * (this.getTileWidth() / 2),
-				'y': (x + y) * (this.getTileHeight() / 2)
+				'x': (x - y) * (this.getTileWidth() / 2) + this.getMapTileOffset().x,
+				'y': (x + y) * (this.getTileHeight() / 2) - this.getMapTileOffset().y
 			};
 		}
 	}

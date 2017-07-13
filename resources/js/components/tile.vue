@@ -37,6 +37,7 @@
 
 		created: function() {
 			this.settings = Cultures.settings;
+			this.scene = Cultures.scene;
 		}
 	}
 </script>
