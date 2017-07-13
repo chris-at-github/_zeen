@@ -34,8 +34,8 @@
 				return {
 					'width':  this.size.width + 'px',
 					'height': this.size.height + 'px',
-					'left': this.getObjectCenterPosition().x + 'px',
-					'top': this.getObjectCenterPosition().y + 'px'
+					'left': this.getObjectPosition().x + 'px',
+					'top': this.getObjectPosition().y + 'px'
 				}
 			}
 		},

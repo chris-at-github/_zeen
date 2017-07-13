@@ -1,9 +1,9 @@
 export default {
 	methods: {
-		getObjectCenterPosition: function() {
+		getObjectPosition: function() {
 			return {
-				'x': 0,
-				'y': 0
+				'x': this.getTileCenterPosition(this.position.x, this.position.y).x,
+				'y': this.getTileCenterPosition(this.position.x, this.position.y).y
 			};
 		},
 	}

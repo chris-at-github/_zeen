@@ -29,9 +29,9 @@ export default {
 		},
 
 		getMapTileOffset: function() {
-			return {
 
-				// this only works if map.x = map.y
+			// this only works if map.x = map.y
+			return {
 				'x': (this.getMapWidth() / 2) - (this.getTileWidth() / 2),
 				'y': this.getTileHeight()
 			}
@@ -49,6 +49,13 @@ export default {
 			return {
 				'x': (x - y) * (this.getTileWidth() / 2) + this.getMapTileOffset().x,
 				'y': (x + y) * (this.getTileHeight() / 2) - this.getMapTileOffset().y
+			};
+		},
+
+		getTileCenterPosition: function(x, y) {
+			return {
+				'x': this.getTilePosition(this.position.x, this.position.y).x + (this.getTileWidth() / 2),
+				'y': this.getTilePosition(this.position.x, this.position.y).y + (this.getTileHeight() / 2)
 			};
 		}
 	}
