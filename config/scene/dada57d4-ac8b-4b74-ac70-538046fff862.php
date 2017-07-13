@@ -56,12 +56,16 @@ return [
 		[
 			'position' => [
 				'x' => 1,
-				'y' => 1
+				'y' => 1,
+				'offset' => [
+					'x' => -16,
+					'y' => -16
+				]
 			],
 			'size' => [
-				'width' => 35,
-				'height' => 35
-			]
+				'width' => 32,
+				'height' => 32
+			],
 		]
 	]
 ];
