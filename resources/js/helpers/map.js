@@ -39,11 +39,13 @@ export default {
 		},
 
 		getMapWidth: function() {
-			return (this.getMaxX() * this.settings.tile.size);
+
+			// @see: https://stackoverflow.com/questions/4615116/how-to-calculate-the-height-and-width-of-an-isometric-rectangle-square#answer-4618210
+			return ((this.getMaxX() + this.getMaxY()) * (this.getTileWidth() / 2));
 		},
 
 		getMapHeight: function() {
-			return (this.getMaxY() * (this.settings.tile.size));
+			return ((this.getMaxX() + this.getMaxY()) * (this.getTileHeight() / 2));
 		},
 
 		getMapCenterPosition: function() {
