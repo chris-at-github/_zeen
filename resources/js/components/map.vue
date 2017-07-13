@@ -9,6 +9,10 @@
 				 v-bind:key="index">
 			</cs-tile>
 		</div>
+
+		<div class="map--object-container">
+
+		</div>
 	</div>
 </template>
 

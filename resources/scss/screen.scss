@@ -11,11 +11,15 @@ body {
 		position: absolute;
 	}
 
-	.map--tile-container {
+	.map--tile-container, .map--object-container {
 		position: absolute;
 		top: 0; left: 0;
 		width: 100%;
 		height: 100%;
+	}
+
+	.map--object-container {
+		background: #fff;
 	}
 }
 
@@ -27,5 +31,11 @@ body {
 	.tile--terrain {
 		width: 100%;
 		height: 100%;
+	}
+}
+
+.object {
+	& {
+		position: absolute;
 	}
 }

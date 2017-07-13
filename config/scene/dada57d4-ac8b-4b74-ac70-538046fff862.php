@@ -50,5 +50,18 @@ return [
 //			'y' => 3,
 //			'terrain' => '49cb0a4e-6625-11e7-907b-a6006ad3dba0',
 //		],
+	],
+
+	'objects' => [
+		[
+			'position' => [
+				'x' => 1,
+				'y' => 1
+			],
+			'size' => [
+				'width' => 35,
+				'height' => 35
+			]
+		]
 	]
 ];
