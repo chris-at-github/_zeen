@@ -35,7 +35,7 @@
 					'width':  this.size.width + 'px',
 					'height': this.size.height + 'px',
 					'left': this.getObjectPosition().x + 'px',
-					'bottom': this.getObjectPosition().y + 'px'
+					'top': this.getObjectPosition().y + 'px'
 				}
 			}
 		},
