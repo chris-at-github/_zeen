@@ -20,6 +20,7 @@
 	</div>
 
 	<?php echo \App\Helpers\Svg::import('tiles'); ?>
+	<?php echo \App\Helpers\Svg::import('objects'); ?>
 
 	<script type="text/javascript">
 		Cultures.settings = <?php echo \App\Helpers\Json::encode($settings); ?>;

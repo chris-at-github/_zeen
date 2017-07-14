@@ -1,10 +1,8 @@
 <template>
 	<div class="object" v-bind:style="styleObject">
-		<!--
-			<svg class="tile--terrain">
-				<use v-bind="{'xlink:href':'#' + terrain}" />
+			<svg class="object--skeleton">
+				<use v-bind="{'xlink:href':'#object-' + id}" />
 			</svg>
-		-->
 	</div>
 </template>
 
@@ -20,7 +18,7 @@
 			ObjectHelper
 		],
 
-		props: ['position', 'size'],
+		props: ['id', 'position', 'size'],
 
 		data: function() {
 			return {

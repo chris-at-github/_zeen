@@ -13,6 +13,7 @@
 		<div class="map--object-container">
 			<cs-object
 				v-for="(object, index) in objects"
+				v-bind:id="object.id"
 				v-bind:position="object.position"
 				v-bind:size="object.size"
 				v-bind:key="index">

@@ -37,6 +37,10 @@ body {
 .object {
 	& {
 		position: absolute;
-		background: red;
+	}
+
+	.object--skeleton {
+		width: 100%;
+		height: 100%;
 	}
 }
