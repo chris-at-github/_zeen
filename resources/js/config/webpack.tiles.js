@@ -18,6 +18,7 @@ const config = {
 				loader:  'svg-sprite-loader',
 				include: path.resolve('./resources/images/tiles'),
 				options: {
+					symbolId: 'tile-[name]',
 					extract:        true,
 					spriteFilename: './public/svg/tiles.svg'
 				}

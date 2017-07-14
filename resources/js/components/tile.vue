@@ -1,7 +1,7 @@
 <template>
 	<div class="tile" v-bind:style="styleObject">
 		<svg class="tile--terrain">
-			<use v-bind="{'xlink:href':'#' + terrain}" />
+			<use v-bind="{'xlink:href':'#tile-' + terrain}" />
 		</svg>
 	</div>
 </template>
