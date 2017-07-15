@@ -54,18 +54,18 @@ return [
 
 	'objects' => [
 		[
-			'id' => '9b7b0b8e-d173-4086-89b8-b453fe133397',
+			'id' => '029f02a2-403f-4bc2-b269-f52180ac0a5c',
 			'position' => [
-				'x' => 1,
+				'x' => 2,
 				'y' => 1,
 				'offset' => [
-					'x' => -16,
-					'y' => -16
+					'x' => 0,
+					'y' => 0
 				]
 			],
 			'size' => [
-				'width' => 32,
-				'height' => 32
+				'width' => 30,
+				'height' => 111
 			],
 		],
 
