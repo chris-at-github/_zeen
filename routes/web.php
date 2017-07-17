@@ -11,12 +11,14 @@ $app->get('/', function () use ($app) {
 });
 
 $app->get('/scene/{uuid}', function ($uuid) use ($app) {
-
 	$app->configure('cultures');
-	$app->configure('scene/' . $uuid);
 
-	return view('index', [
-		'settings' => config('cultures'),
-		'scene' => config('scene/' . $uuid)
-	]);
+	if(in_array($uuid, config('cultures.scenes')) === true) {
+		$app->configure('scene/' . $uuid);
+
+		return view('scene', [
+			'settings' => config('cultures'),
+			'scene' => config('scene/' . $uuid)
+		]);
+	}
 });
