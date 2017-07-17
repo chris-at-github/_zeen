@@ -15,7 +15,7 @@ class Svg {
 	 * @return string html for svg sprite
 	 */
 	public static function import($filename) {
-		$svgpath = app()->basePath(config('cultures.path.svg')) . $filename . '.svg';
+		$svgpath = app()->basePath(config('zeen.path.svg')) . $filename . '.svg';
 
 		if(is_file($svgpath) === true) {
 			return file_get_contents($svgpath);
