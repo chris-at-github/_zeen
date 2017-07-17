@@ -18,5 +18,5 @@ var mix = require('laravel-mix');
  | file for the application as well as bundling up all the JS files.
  |
  */
-mix.js('resources/js/cultures.js', 'public/js')
+mix.js('resources/js/zeen.js', 'public/js')
 	.sass('resources/scss/screen.scss', 'public/css');

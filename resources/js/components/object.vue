@@ -39,8 +39,8 @@
 		},
 
 		created: function() {
-			this.settings = Cultures.settings;
-			this.scene = Cultures.scene;
+			this.settings = Zeen.settings;
+			this.scene = Zeen.scene;
 		}
 	}
 </script>

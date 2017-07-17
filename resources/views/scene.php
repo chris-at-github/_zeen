@@ -10,7 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="/css/screen.css">
 
 	<script type="text/javascript">
-		var Cultures = {};
+		var Zeen = {};
 	</script>
 </head>
 <body>
@@ -23,9 +23,9 @@
 	<?php echo \App\Helpers\Svg::import('objects'); ?>
 
 	<script type="text/javascript">
-		Cultures.settings = <?php echo \App\Helpers\Json::encode($settings); ?>;
-		Cultures.scene = <?php echo \App\Helpers\Json::encode($scene); ?>;
+		Zeen.settings = <?php echo \App\Helpers\Json::encode($settings); ?>;
+		Zeen.scene = <?php echo \App\Helpers\Json::encode($scene); ?>;
 	</script>
-	<script src="/js/cultures.js"></script>
+	<script src="/js/zeen.js"></script>
 </body>
 </html>
