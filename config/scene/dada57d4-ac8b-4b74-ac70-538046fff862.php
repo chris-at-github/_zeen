@@ -1,6 +1,8 @@
 <?php
 return [
-	'id' => 'dada57d4-ac8b-4b74-ac70-538046fff862',
+	'uuid' => 'dada57d4-ac8b-4b74-ac70-538046fff862',
+	'title' => 'Ein Tag am Strand',
+	'version' => '0.0.1',
 
 	'tiles' => [
 		[
