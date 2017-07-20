@@ -25,7 +25,11 @@ class Scene {
 
 		if(empty($this->storage) === true) {
 
-			echo Cache::get('key');
+//			if(Cache::get('key'))
+
+//			dd(Cache::has('key'));
+
+			dd(Cache::get('scenes'));
 
 			// Initialize zeen config
 			app()->configure('zeen');
@@ -44,7 +48,7 @@ class Scene {
 				];
 			}
 
-			Cache::put('key', 1, 10);
+			Cache::put('scenes', $this->storage, 1440);
 		}
 	}
 }
