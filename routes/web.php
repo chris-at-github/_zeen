@@ -11,8 +11,20 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', function() {
+  return view('index', [
+  	'settings' => config('zeen'),
+  	'scene' => null
+	]);
+});
+
+Route::get('/scene/{uuid}', function($uuid) {
+	if(in_array($uuid, config('zeen.scenes')) === true) {
+		return view('scene', [
+			'settings' => config('zeen'),
+			'scene' => config('scene.' . $uuid)
+		]);
+	}
 });
 
 

@@ -26,6 +26,6 @@
 		Cultures.settings = <?php echo \App\Helpers\Json::encode($settings); ?>;
 		Cultures.scene = <?php echo \App\Helpers\Json::encode($scene); ?>;
 	</script>
-	<script src="/js/cultures.js"></script>
+	<script src="/js/zeen.js"></script>
 </body>
 </html>
